@@ -1,0 +1,30 @@
+How To set Path_05 !
+
+Step1. 
+
+File Explorer kholain aur is location par jayein:
+C:\Program Files\Java\
+
+Apne installed JDK folder ke andar bin folder ko open karein (jaise: C:\Program Files\Java\jdk-21\bin). Top address bar par click karke is poore path ko copy kar lein.
+
+go to c drive 
+then program files 
+then java 
+then jdk 27
+
+then click on bin folder 
+
+C:\Program Files\Java\jdk-27\bin    select this path 
+
+step2.
+
+Keyboard par Win + R dabayein, sysdm.cpl type karke Enter press karein.
+
+System Properties window khulne par Advanced tab par jayein aur neeche Environment Variables button par click karein.
+step3: paste that path on environment variables and click on ok 
+
+step4.
+
+click on cmd and write javac -version
+
+
