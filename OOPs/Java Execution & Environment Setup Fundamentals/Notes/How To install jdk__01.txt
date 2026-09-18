@@ -1,0 +1,32 @@
+How To install jdk_01
+
+step1: 
+Write Oracle java on google chrome 
+
+step2. 
+click on Java Software the Official website on google chromw 
+
+step3:
+
+Click the download java button 
+
+step4:
+
+go below click on windows 
+
+click on
+x64 installer file 
+
+and download it !which is .exe file 
+
+step5: 
+
+After downloaded the file  
+
+Click on it and install 
+
+After Successfully installed the jdk . click on close 
+
+
+
+step6. now set-up the path 
