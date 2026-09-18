@@ -1,0 +1,17 @@
+Real_Life_Example__07
+
+Haan, bilkul sahi samjhe aap! Is misaal ko real life se jod kar aur aasan tarike se samajhte hain:
+
+*JDK Download & Install Karna (Toolbox Ghar Aana):**
+Aapne internet se JDK install kiya, iska matlab aapne ek naya Java Toolbox khareed kar apne computer ke ek khas kamre (`C:\Program Files\Java\jdk-27\bin`) me rakh diya. Ab saare tools (`javac`, `java`) aapke ghar (PC) me aa chuke hain.
+
+
+*Bina PATH Set Kiye (CMD ko address na pata hona):**
+Aapka Command Prompt (CMD) ek aise naukar ki tarah hai jise computer ke saare kamron ka pata nahi hai. Jab aap bina PATH set kiye CMD se bolte hain `"javac"`, toh woh bolta hai: *"Mujhe nahi pata `javac` kis kamre me rakha hai!"* Isliye aapko har baar use poora address pakdana padta tha: `"C:\Program Files\Java\jdk-27\bin\javac"`.
+
+
+* **PATH Set Karna (Address Book me entry karna):**
+PATH set karne ka matlab hai aapne CMD ki VIP address book me permanently likh diya: *"Jab bhi main tumse `javac` ya `java` maangu, toh tum seedha `C:\Program Files\Java\jdk-27\bin` wale kamre me ja kar dhoond lena."*
+
+* **PATH Set Hone Ke Baad:**
+Ab aap computer ke kisi bhi room/folder (Desktop, Downloads, ya kisi bhi Drive) me khade ho kar sirf `javac Demo.java` bolenge, toh CMD ko pehle se pata hai ke tool kahan rakha hai. Woh turant wahan se tool uthayega aur aapka kaam kar dega.
