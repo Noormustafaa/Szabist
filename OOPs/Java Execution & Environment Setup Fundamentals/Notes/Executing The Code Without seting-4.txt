@@ -1,0 +1,91 @@
+Executing The Code Without seting-path_04
+
+
+Bina PATH set kiye, full path (address) use karke Java program compile aur run karne ka tariqa step-by-step ye hai:
+
+step1.
+
+Notepad kholain aur ye simple code paste karein:
+
+
+public class Demo {
+    public static void main(String[] args) {
+        System.out.println("Bina PATH set kiye Java run ho gaya!");
+    }
+}
+
+
+Is file ko kisi aasan folder me save kar lein, jaise Desktop par ek folder bana kar:
+
+
+File Name: Demo.java
+
+Save as type: All Files (.)
+
+
+step2.
+
+Command Prompt (CMD) khol kar folder me jayein
+
+Win + R dabayein, cmd type karke Enter press karein.
+
+Ab cd command ke zariye us folder me jayein jahan aapne Demo.java save ki hai:
+
+
+Ab cd command ke zariye us folder me jayein jahan aapne Demo.java save ki hai:
+
+
+step3.
+
+Full Address se Compile karein (javac)
+
+Ab javac.exe ka poora location address inverted commas "" ke andar likhein, aur aage file ka naam likhein:
+
+
+"C:\Program Files\Java\jdk-21\bin\javac" Demo.java
+
+
+(Note: Agar aapke computer me JDK ka version alag hai, jaise jdk-17 ya jdk-22, toh jdk-21 ki jagah apna folder name likhein).
+
+
+
+Verification: Agar code me koi error nahi hoga, toh bina kisi message ke agli line aa jayegi aur folder me Demo.class file ban jayegi.
+
+Full Address se Run karein (java)
+
+
+Ab program ko execute karne ke liye java.exe ka full address use karein (class name ke aage .java ya .class mat lagayein):
+
+
+
+"C:\Program Files\Java\jdk-21\bin\java" Demo
+
+Verification: Command Prompt par output print ho jayega:
+Bina PATH set kiye Java run ho gaya!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
