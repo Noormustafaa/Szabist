@@ -1,0 +1,56 @@
+Executing The Code !
+Using the Notepad ..
+
+Step1. write the java code in Notepad . 
+
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello from Notepad!");
+    }
+}
+
+
+Step2. Save The File a .java extension
+
+Go to File > Save As:
+
+File name: HelloWorld.java (the name must match the public class name exactly, including case).
+
+Step3.
+
+Save as type: Change from Text Documents (.txt)* to All Files (.) so Notepad doesn't save it as HelloWorld.java.txt.
+
+step4.
+
+3.Open Command Prompt and navigate to your folder:Press Win + R, type cmd, and press Enter. Use the cd command to navigate to the folder where you saved HelloWorld.java:
+
+cd C:\path\to\your\folder
+
+
+step5.
+
+4.Compile the Java file:Run the Java compiler (javac) on your source file:
+
+javac HelloWorld.java
+
+
+If there are no syntax errors, this command produces a new file in the same directory called HelloWorld.class containing Java bytecode.
+
+step6.
+
+5.Execute the compiled bytecode:Run the compiled class through the Java Virtual Machine (java):
+
+
+java HelloWorld
+
+
+
+
+
+
+
+
+
+
+
