@@ -1,0 +1,43 @@
+Why Do we set-path
+
+Haan, bina PATH set kiye bhi aap CMD ke zariye code run kar sakte hain! PATH set na karne par computer band nahi hota, bas aapko thodi zyada mehnat karni padti hai.
+
+1. PATH Kyun Set Karte Hain? (Aasan Misaal)
+Maan lijiye javac.exe aapke computer ke is ghar me rehta hai:
+C:\Program Files\Java\jdk-21\bin
+
+Jab aap CMD kholte hain, toh aap kisi aur folder me hote hain (jaise C:\Users\Desktop). Jab aap wahan se sirf javac type karte hain, toh Windows poore computer me dhundne ki bajaye sirf apni Address Book (System PATH) check karta hai.
+
+
+Agar Address Book me entry nahi hai: Windows bolega "’javac’ is not recognized" (Mujhe nahi pata ye kahan hai).
+
+PATH set karne ka matlab: Windows ki Address Book me ye address save kar dena taake aap poore computer me kisi bhi folder se sirf javac likhein aur Windows usko khud dhund le.
+
+
+2. Agar PATH Set Na Karein Toh Code Kaise Run Hoga?
+Agar aap PATH set nahi karte, toh aapko har baar Java compiler ka poora address (Path) type karna padega.
+
+Step 1: Compile Karein (Full Path Ke Sath)
+CMD me apne .java file wale folder me jayein aur poora address likhein:
+
+"C:\Program Files\Java\jdk-27\bin\javac" HelloWorld.java            Note Java ka version same likha hua hona chaye
+
+(Inverted commas "" isliye lagaye hain kyunki "Program Files" ke beech me space hai).
+
+
+Step 2: Run Karein (Full Path Ke Sath)
+
+
+"C:\Program Files\Java\jdk-27\bin\java" HelloWorld
+
+Farq Kya Pda?
+Bina PATH ke: Aapko har bar itna lamba address "C:\Program Files\Java\jdk-27\bin\javac" type karna padega.
+
+PATH set karne ke baad: Aap poore system me kahin bhi hon, bas chhota sa javac HelloWorld.java likhenge aur kaam ho jayega.
+
+Isi kharch aur mehnat se bachne ke liye hum ek baar PATH set kar dete hain!
+
+
+
+
+
