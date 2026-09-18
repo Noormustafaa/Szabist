@@ -1,0 +1,41 @@
+Execute After Seting the path_06!
+
+
+Step1.
+Notepad me ye code likhein aur file ko Demo.java naam se save karein (Save as type: All Files):
+
+
+public class Demo {
+    public static void main(String[] args) {
+        System.out.println("Zabardast! Ab PATH set hai aur short command kaam kar rahi hai!");
+    }
+}
+
+
+CMD Me Folder Open Karein
+
+
+Naya Command Prompt (Win + R -> cmd) kholain aur cd command ke zariye us folder me jayein jahan Demo.java save hai:
+
+cd C:\path\to\your\folder
+
+
+Direct Compile Karein
+
+Ab bina kisi C:\Program Files\... ke direct compile karein:
+
+
+javac Demo.java
+
+Verification: Folder me Demo.class file generate ho jayegi.
+
+Direct Run Karein
+
+Ab direct launcher command chalayein:
+
+
+java Demo
+
+
+Verification: Screen par output print ho jayega: Zabardast! Ab PATH set hai aur short command kaam kar rahi hai!
+
