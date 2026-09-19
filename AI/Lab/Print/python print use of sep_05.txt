@@ -1,0 +1,94 @@
+python print use of sep 
+
+sep ek operator nahi hai, balkey ye Python ke print() function ka ek parameter (keyword argument) hai.
+
+Class mein students ki confusion door karne ke liye aap unhein in dono ka farq is tarah samjha sakte hain:
+
+
+1. Parameter (sep) Kiya Hota Hai?
+Definition: Parameter wo value ya option hoti hai jo hum kisi function (jaise print()) ke andar paas karte hain taake us function ka behavior change ho sake.
+
+Example: print("A", "B", sep="-") mein sep function ko bata raha hai ke comma wale items ko kaise alag karna hai.
+
+
+
+sep ka matlab hai Separator (yani darmiyan mein alag karne wali cheez).
+
+Python mein jab aap print() function ke andar comma , laga kar ek se zyada items likhte hain, to Python unke darmiyan by default ek space (khali jagah) daal deta hai. sep parameter isi default space ko change karne ke liye use hota hai.
+
+
+
+--Note : Python Ka Default Behavior (Bina sep ke)
+
+Agar aap likhein:
+
+print(15, 8, 2026)
+
+
+To Output aayega: 15 8 2026 (Values ke darmiyan space aagayi).
+
+
+sep Parameter Kaise Kaam Karta Hai?
+Jab aap sep parameter use karte hain, to aap Python ko bolte hain ke "Commas ke beech mein space dene ke bajaye, mera bataya hua character/symbol daalo."
+
+
+Code Breakdown:
+
+
+1: Date Formatting:
+
+day = 15
+month = 8
+year = 2026
+
+print(day, month, year, sep="-")
+
+
+
+Working: Python day, month, aur year ko print karega lekin unke darmiyan space ke bajaye - daal dega.
+
+Output: 15-8-2026
+
+
+
+
+2: Flow / Pipeline Formatting:
+
+print("AI", "Machine Learning", "Deep Learning", sep=" -> ")
+
+Working: Har string ke darmiyan space ke bajaye -> (arrow) aayega.
+
+Output: AI -> Machine Learning -> Deep Learning
+
+
+
+sep Kab Aur Kyun Use Karte Hain?
+Students ko samjhane ke liye ye 4 main reasons hain:
+
+
+Dates aur Time print karne ke liye:
+
+Jaise date mein / ya - lagana (15/08/2026) ya time mein : lagana (10:30:00).
+
+
+Data Files (CSV) jaisa output banane ke liye:
+
+Jab aap chahte hain ke saari values comma se separate ho kar aayein (sep=",").
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
