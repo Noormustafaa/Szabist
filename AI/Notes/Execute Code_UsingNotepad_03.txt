@@ -1,0 +1,29 @@
+Execute Code_UsingNotepad_03
+
+
+Step1. Write 
+
+	print("Hello World! Python Notepad se chal rahi hai.")
+
+
+step2. 
+
+	Save file 
+Save as type dropdown me "All Files (.)
+Write  test.py  name  and then save 
+
+
+step3.Open cmd and go to that folder where test.py already exist !
+
+python test.py
+
+Agar aapka PATH set hai, toh screen par direct output show ho jayega.
+
+
+and If path set na ho then ?
+
+2. Python.exe ka Full Path Type Karein
+Aapko CMD ko batana padega ki python.exe exactly kahan pada hai. CMD me python ki jagah python.exe ka poora location address double quotes ("") ke andar likhein, aur aage apni file ka naam dein:
+
+
+"C:\Users\YourUsername\AppData\Local\Programs\Python\Python312\python.exe" test.py	
