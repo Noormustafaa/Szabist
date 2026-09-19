@@ -1,0 +1,52 @@
+f-string_11
+
+
+F-String Ka Sabse Aasan Tarika
+F-String ka matlab hai "Fill-in-the-Blanks" (Khali jagah bharna).
+
+Iska simple sa usool ye hai:
+
+1: String ke start mein f lagayein.
+
+2: Jahan variable ki value chahiye, wahan {variable_name} likh dein.
+example :
+
+
+name = "Ali"
+print(f"Mera naam {name} hai.")
+
+
+Output: Mera naam Ali hai.
+
+Python "Ali" ko utha kar direct {name} ki jagah fit kar deta hai.
+
+
+Kya Ye Type Cast (Automatic Conversion) Karta Hai?
+Haan, bilkul! Ye iska sabse bada fayda hai.
+
+F-string ke andar aap chahe Integer, Float, Boolean, ya List daalein — Python unhein background mein automatically string mein type cast (convert) kar deta hai. Aapko manually str() likhne ki zaroorat nahi hoti.
+
+
+
+ex:
+
+
+age = 22             # Integer
+height = 5.9         # Float
+is_student = True    # Boolean
+
+# Zero manual type casting needed!
+print(f"Age: {age}, Height: {height}, Student: {is_student}")
+
+
+
+
+
+
+--Output
+
+
+Age: 22, Height: 5.9, Student: True
+
+
+
