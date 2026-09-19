@@ -1,0 +1,107 @@
+f-Strings
+
+
+f-strings (Formatted String Literals) Python 3.6 mein introduce hue the. Ye aaj kal Python mein strings ko format karne ka sabse modern, aasan aur fast tarika hai.
+
+.format() ke muqable mein iska sabse bada fayda ye hai ke aapko string ke bahar .format(...) likhne ki zaroorat nahi parti. Aap direct variable ka naam {} ke andar likhte
+
+
+Key Rule / Syntax
+String ke pehle double quotes "..." se bilkul pehle f ya F laga dein:
+
+
+f"Hello {variable_name}"
+
+
+Code Breakdown (Step-by-Step) 	
+
+
+student = "Usman"
+obtained_marks = 425
+total_marks = 500
+
+
+Pehle humne teen normal variables banaye.
+
+
+Step 1: Direct Variable Use (f"Student: {student}")
+
+
+print(f"Student: {student}")
+
+
+
+Working: Quotes se pehle f lagaya. Python samajh gaya ke string ke andar {} mein jo bhi likha hoga, uski value print karni hai.
+
+Output: Student: Usman
+
+
+
+Step 2: Math / Expressions Inside {}
+
+
+print(f"Percentage: {(obtained_marks / total_marks) * 100}%")
+
+
+
+
+F-strings ka sabse zabardast feature ye hai ke aap {} ke andar na sirf variables balkey math calculations aur functions bhi chala sakte hain!
+
+
+
+Working:Python pehle {} ke andar moojood formula execute karega: (425 / 500) * 100 $\rightarrow$ 85.0Phir us result (85.0) ko string ke andar fit kar dega.Aakhir mein bahar likha hua % symbol print kar dega.
+
+
+
+Output: Percentage: 85.0%
+
+
+
+
+Teeno Tarikon Ka Muqabla (Class Comparison)
+
+
+# 1. Plus (+) Tarika — Long & Messy
+print("Percentage: " + str((obtained_marks / total_marks) * 100) + "%")
+
+# 2. .format() Tarika — Better, but longer
+print("Percentage: {}%".format((obtained_marks / total_marks) * 100))
+
+# 3. f-string Tarika — Cleanest, Fastest & Best!
+print(f"Percentage: {(obtained_marks / total_marks) * 100}%")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
