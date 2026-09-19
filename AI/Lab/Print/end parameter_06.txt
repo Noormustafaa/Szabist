@@ -1,0 +1,71 @@
+end parameter_06
+
+end ka matlab hai "Ending Character" (yani print() statement ke bilkul aakhir mein kya aana chahiye).
+
+Jaise sep function ke items ke darmiyan (middle) kaam karta tha, waise hi end function ke aakhir (last) mein kaam karta hai.
+
+Python Ka Default Behavior (Bina end ke)
+Python mein print() function ka default behavior hota hai ke wo apna kaam khatam karke nayi line (\n) par chala jata hai.
+
+
+print("Loading")
+print("Dataset")
+print("Complete!")
+
+
+To Python har print() ke baad naturally next line par chala jayega:
+
+--Output
+
+Loading
+Dataset
+Complete!
+
+
+end Parameter Kaise Kaam Karta Hai?
+Jab aap end parameter use karte hain, to aap Python ko bolte hain:
+
+"Agli line par mat jao! Meri di hui cheez ko aakhir mein lagao aur cursor ko usi line par roko
+
+
+print("Loading", end="... ")
+print("Dataset", end="... ")
+print("Complete!")
+
+
+
+Pehli Line: print("Loading", end="... ")
+
+Python screen par Loading likhega aur aakhir mein ...  (dots + space) daal kar usi line par ruk jayega (nayi line par nahi jayega).
+
+Doosri Line: print("Dataset", end="... ")
+
+Python pichli hi line ke aage Dataset...  jod dega.
+
+
+
+
+Teesri Line: print("Complete!")
+
+Isme end nahi likha, to Python Complete! likhega aur uske baad normal tarike se nayi line par chala jayega.
+
+
+
+--Final Output 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
