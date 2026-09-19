@@ -1,0 +1,123 @@
+Escape Characters Concept_07
+
+
+Escape characters wo special characters hote hain jo Backslash (\) se shuru hote hain. Inka kaam string ke andar aise characters daalna hota hai jo normally keyboard se direct type karke formatted output nahi dete, ya jin ka Python mein special meaning hota hai.
+
+Key Escape Characters Concept
+
+
+EscapeCharacter                     Naor / Name              Purpose
+
+\n	                            Newline	             Text ko agli line par bhejta hai.
+
+\t	                            Tab Space	             Text ke beech mein 4 ya 8 spaces (Tab) ka gap deta hai taake output aligned rahe.
+
+
+
+\"	                            Double Quote	     Double-quoted string ke andar double quotes print karne ke liye.
+
+\\	                            Backslash	             String mein actual \ character print karne ke liye (jaise file paths mein).
+
+
+
+--Understanding of Code 
+
+
+Code Breakdown (Line-by-Line)
+Line 1: Header + Line Pattern
+
+
+print("STUDENT REPORT\n" + "="*15)
+
+STUDENT REPORT: Pehle title print hoga.
+
+
+\n: Iska matlab hai "nayi line par jao". Ab pichli line par rehne ke bajaye cursor neeche chala gaya.
+
++ "="*15: Python string multiplication kar raha hai. "=" * 15 se 15 baar = symbol jud kar aik line (===============) ban jayega.
+
+
+
+
+Line 2: Tab Space & Double Quotes
+
+
+print("Name:\t\"Ali\"")
+
+Name:: Text print hoga.
+
+
+\t: Name: ke baad aik tab space aayegi taake aage ka data proper column format mein dikhe.
+
+\"Ayesha\": Agar aap "Name: "Ayesha"" likhenge to Python syntax error dega (kyun ke string double quotes se shuru aur khatam hoti hai). Isliye \" use karte hain taake Python samajh jaye ke hum double quotes print karna chahte hain.
+
+
+
+
+Line 3: Column Alignment
+
+
+print("Course:\tArtificial Intelligence")
+
+
+Course:: Label.
+
+\t: Is \t ki wajah se "Artificial Intelligence" bilkul "Ayesha" ke neeche align ho kar aayega, kyun ke dono lines mein \t barabar distance deta hai.
+
+
+
+print("Status:\tPassed\nPath:\tC:\\Users\\AI_Lab")
+
+
+
+
+Status:\tPassed: Status print karega aur \t se gap dega.
+
+\n: Doosri print() statement likhne ke bajaye isi print() ke andar \n daal kar agli line par chale gaye.
+
+C:\\Users\\AI_Lab: Windows mein file path C:\Users... hota hai. Lekin Python backslash \ ko escape character samajhta hai (jaise \U ko Unicode samajh sakta hai). Isliye aik actual \ print karne ke liye hum \\ likhte hain.
+
+
+
+
+
+Output Visualization
+
+
+
+
+
+STUDENT REPORT
+===============
+Name:	"Ayesha"
+Course:	Artificial Intelligence
+Status:	Passed
+Path:	C:\Users\AI_Lab
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
