@@ -1,0 +1,82 @@
+How To install Anaconda_04
+
+Step1.
+
+Open Chrom and Write Anaconda and press Enter 
+
+Click on Official Website Anaconda.com
+
+Step2.
+
+Click on Free Download 
+
+Step3. 
+
+You will see Distribution is visible 
+Then click on just Get Started 
+
+Step4. Signup with Google 
+
+Step5. 
+
+Scroll down in windows portion just click on 
+	Windows65-bit Graphical installer 
+
+
+Step6. 
+open it and click on NexT
+and then Click on i Agree 
+Then Select All users 
+
+Then Click Next 
+then again Click next 
+
+
+Select check Register Anaconda3
+
+
+Step7. in last uncheck launch anaconda navigator 
+And     Welcome to anaconda 
+
+
+Step8 Click on Finish .
+
+
+
+Step9. Click on windows button and type anaconda you will see "anaconda prompt" which is Cli
+
+And Nevigator is like UI .
+
+
+
+step10. Click on anaconda prompt to open Jupyter Notebook  so we can run First Python Program 
+
+Now Type "jupyter notebook"  and Press Enter.
+
+
+Step11.
+
+So jupyter notebook is the webapplication 
+
+
+
+step12. click on new near upload icon and Select Python 3,
+
+	So i can create First Notebook 
+
+
+step13.
+
+Remane the name and ipynb is the extension of it .
+
+
+Step14.
+
+print("Hello_World")
+
+
+
+
+
+
+
