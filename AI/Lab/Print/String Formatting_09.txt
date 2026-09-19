@@ -1,0 +1,163 @@
+String Formatting_09
+
+String formatting ka matlab hota hai variables ki values ko kisi string ke andar dynamic tarike se fit karna.
+
+Purane tarike mein agar humein variables aur strings ko milana hota tha, to hum + sign use karte the:
+"Model: " + model_name + ", Accuracy: " + str(accuracy) + "%"
+
+
+Is purane tarike ke 2 bade masle the:
+
+accuracy (float number) ko string mein convert karne ke liye str() likhna parta tha.
+
+Code boht messy aur samajhne mein mushkil ho jata tha.
+
+.format() method is masle ko placeholders {} ke zariye solve karta hai.
+
+
+Code Breakdown
+1. Positional Formatting (Sequence wise)
+
+model_name = "Neural Network"
+accuracy = 95.8
+
+print("Model: {}, Accuracy: {}%".format(model_name, accuracy))
+
+
+Placeholders {}: String ke andar jo khali curly braces {} bane hain, wo Python ke liye khali jaghein hain.
+
+
+
+
+
+
+Working: .format() function sequentially pehli value (model_name) ko pehle {} mein daal deta hai, aur doosri value (accuracy) ko doosre {} mein daal deta hai.
+
+Output: Model: Neural Network, Accuracy: 95.8%
+
+
+
+Note: Agar aap {0} aur {1} likhein, to aap explicit position bhi bata sakte hain (e.g. format(A, B) mein {1} par B aayega aur {0} par A).
+
+
+
+
+
+2. Named Formatting (Keyword arguments wise)
+
+print("Algorithm: {algo} | Epochs: {ep}".format(algo="CNN", ep=50))
+
+
+Named Placeholders {algo}, {ep}: Har placeholder ko ek naam de diya gaya hai.
+
+Working: Is tarike mein order (tarteeb) matter nahi karti. Python name match karta hai:
+
+{algo} ki jagah "CNN" aayega.
+
+{ep} ki jagah 50 aayega.
+
+Output: Algorithm: CNN | Epochs: 50
+
+
+
+
+
+Legacy Code Reading: Aaj kal Python 3.6+ mein f-strings (Program 8) zyada use hote hain, lekin .format() method purani Python libraries, AI Research papers ke code, aur official documentations mein boht milta hai, isliye ise samajhna zaroori hai.
+
+
+Automatic Type Conversion: .format() khud hi numbers (int/float) ko string mein convert kar deta hai, aapko alag se str() nahi likhna parta.
+
+
+Why we need? Is ki zaroorat isliye parhi kyun ke purana tarika—yani Plus (+) operator se strings aur variables ko jodhna—boht messy, error-prone aur pechida tha.
+
+
+Farq samajhne ke liye dono tarikon ka muqabla dekhein:
+
+Purana Tarika (Without Formatting — Using +)
+
+
+name = "Ali"
+age = 22
+score = 95.5
+
+# Purana tarika
+print("Student " + name + " is " + str(age) + " years old and scored " + str(score) + "%.")
+
+
+Purane Tarike Ke Masley (Drawbacks):
+Type Error ka Khadsha: Python string ke sath integer ya float ko direct + nahi karne deta. Aapko har number ko manual str(age) aur str(score) mein convert karna parta hai. Bhool jane par code crash ho jata hai.
+
+Boht Saare Quotes aur Plus Signs: " aur + ki wajah se code parhna aur type karna mushkil ho jata hai.
+
+Spaces Ki Galti: Comma aur spaces ka dhyan na rakhne se output mix ho jata hai (jaise "is" + age se is22 ban jana).
+
+
+
+Naya Tarika (With Formatting — .format())
+
+
+# Naya tarika
+print("Student {} is {} years old and scored {}%.".format(name, age, score))
+
+
+String Formatting Ke Main Fayde (Benefits)
+Automatic Type Conversion:
+
+Aapko str(age) ya str(score) nahi likhna parta. Python khud numbers ko string format mein convert kar leta hai.
+
+Clean & Readable Code:
+
+Poori line ek natural sentence ki tarah dikhti hai. Kahin bhi + ya extra quotes lagane ki zaroorat nahi hoti.
+
+
+
+
+Advanced Formatting Control:
+
+Purane + tarike se aap decimal point control nahi kar sakte the. Formatting ke zariye aap easily numbers ko round-off kar sakte hain (e.g., 95.5432 ko 95.54 dikhana).
+
+Maintenance Aasan:
+
+Agar sentence ki wording change karni ho, to bas string ke andar text badlein, variables ko chhedne ki zaroorat nahi parti.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
