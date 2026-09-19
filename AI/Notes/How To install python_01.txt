@@ -1,0 +1,43 @@
+How To install python_01
+
+step1. 
+
+write python on chrome 
+
+step2. click on python.org 
+
+
+Step3. keep the cursor on download option 
+
+and click on python3.13.5 (or any updated version)
+
+step4. open the exe file 
+
+and select the 
+
+"Use admin privileges  when installing py.exe"
+
+add python.exe to path 
+
+step5. click on customize installation 
+
+then there will be option Features will be visible 
+
+just click next 
+
+step6-- Advance options 
+
+	click on install python 3.13 for all users 
+
+step7. click on install 
+  
+       and after installation click on the close 
+
+
+step8. Verify the installation 
+
+	open cmd 
+
+	python --version  
+
+it will show in output the version of python 	
