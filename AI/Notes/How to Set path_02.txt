@@ -1,0 +1,38 @@
+How to Set path_02
+
+Step1. Go to C drive 
+ 
+	then click on Program Files folder 
+
+	then click on python310 folder 
+
+and copy that path 
+
+
+C:\Program Files\Python310
+
+step2.
+
+Search Edit Enviroment variable on the search bar 
+
+Step3. Go to User Variable Section 
+
+	click on path and then click on edit 
+
+step4. click on new 
+ and paste
+
+C:\Program Files\Python310
+
+and then click on ok 
+
+
+Method 2: Setup File se (Bilkul Aasan)
+
+Python ki .exe setup file dobara open karein.
+
+Modify option select karein aur Next dabayein.
+
+Advanced Options screen par "Add Python to environment variables" ko check karein aur Install par click kar dein.
+
+
