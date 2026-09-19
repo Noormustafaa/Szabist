@@ -1,0 +1,28 @@
+Python mein String Multiplication_08
+
+(ya String Repetition) ka matlab hota hai kisi string ko integer number se multiply karke usey bar-bar repeat karna.
+
+C++ ya Java mein agar aapko 30 martaba # print karna ho, to aapko for loop chalana parta hai. Lekin Python mein aap * operator ka use karke ye kaam bina kisi loop ke ek hi line mein kar sakte hain.
+
+
+Core Concept: Operator Overloading (*)Python mein * operator do tarike se kaam karta hai:Numbers ke saath (Maths): 5 * 3 $\rightarrow$ 15 (Multiplication)String aur Integer ke saath (Repetition): "#" * 5 $\rightarrow$ "#####" (String ko 5 baar jodh do)
+
+
+Code Breakdown (Line-by-Line)
+
+
+print("#" * 30)
+
+
+Explanation: Python # character ko 30 martaba repeat karega.
+
+
+Result: ############################## (Ek clean separator line ban gayi).
+
+
+
+
+print("*")
+print("*" * 2)
+print("*" * 3)
+print("*" * 4)
