@@ -1,0 +1,30 @@
+how to install IntelliJ
+
+
+step1: write intellijidea in google chrome 
+
+step2: click on its official website 
+
+step3: click on the Download button 
+
+steo4: go below and just click on download button the downloading will started 
+
+step5: click on it for begin the installation
+
+step6: click on the next and then click on the desktop option 
+
+step7: click install 
+
+step8:click on run
+
+step9: click on new project 
+
+step10 add the project name any like prog1
+
+step11: uncheck add sample code 
+
+step12: click on create 
+
+step13: click on src then click new then select java class write Demo and then press Enter 
+
+step14:  save and right click and click run 
