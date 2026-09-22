@@ -1,0 +1,19 @@
+how to set the path !
+
+step1. click on C drive and open program files folder 
+
+step2: go below and open MYSQL Folder and open MySQL server 8.0 folder and then open bin file and copy that path 
+
+step3: open environment variables and go to the system variable and double click on path and click on new and paste the same path 
+       and click on ok  ok .
+
+step4. open cmd write 
+       MySQL --version 
+
+step5: MySQL -u root -p and then press enter 
+
+       and then enter the same password 
+
+and then MySQL started
+
+step6: type the command show databases and press enter you will see default databases 
