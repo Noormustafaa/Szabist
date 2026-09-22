@@ -1,0 +1,20 @@
+How to add a new column at a specific position_02
+
+
+using the ALTER TABLE command along with the FIRST or AFTER keywords.
+
+Step1:
+
+ALTER TABLE students ADD COLUMN email VARCHAR(50) AFTER name;
+
+step2: Add a Column at the End (Default)
+If you don't specify FIRST or AFTER, MySQL automatically adds the new column at the very end of the table:
+
+ ALTER TABLE students ADD COLUMN adress VARCHAR(50);
+
+
+step3: How to Check Your Table Structure.
+
+	DESCRIBE students;
+
+
