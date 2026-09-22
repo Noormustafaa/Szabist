@@ -1,0 +1,30 @@
+Drop_OR_Delete a Column_03.
+
+Step1. If you want to permanently remove a column and its data from the table, use the DROP COLUMN command:
+
+ALTER TABLE students DROP COLUMN city;
+
+Result: The city column is completely removed from the students table.
+
+
+step2: 2. Modify a Column (Change Data Type or Size)
+If you want to change a column's data type or increase/decrease its character limit, use the MODIFY COLUMN command:
+
+ALTER TABLE students MODIFY COLUMN name VARCHAR(100);
+
+Result: Changes the size of the name column from VARCHAR(50) to VARCHAR(100).
+
+step3: Rename a Column
+
+If you want to change the name of an existing column without losing its data, use the RENAME COLUMN command:
+
+ALTER TABLE students RENAME COLUMN name TO full_name;
+
+Result: Renames the column name to full_name.
+
+step4:  Check Your Changes.
+
+Always run DESCRIBE afterward to verify the updates:
+
+DESCRIBE students;
+
