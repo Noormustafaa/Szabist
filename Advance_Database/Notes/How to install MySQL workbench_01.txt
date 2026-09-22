@@ -1,0 +1,43 @@
+How to install MySQL workbench !
+
+step1.open google chrome 
+
+and type MySQL 
+
+step2. you will be able to see official website "MySQL"
+ 	click on it !
+
+step3. go to the downloads 
+
+step4 go below click on "MySQL community (GPL) Downloads 
+
+step5: click MySQL installer for windows 
+
+Step6: Select windows (x86, 32-bit)
+
+step7: click download 
+
+step8:click on , " No thanks just start my download 
+
+step9: click on it to begin the installation 
+
+step10: You will see the "Choosing a set-up type " click on   " custom " and then click on next 
+
+
+step11: you will see select Products 
+
+	Select on MySQL Servers and click on it and select in last option "MySQL server 8.0" and click on arrow (->)
+
+	Select on applications click on workbench and click on workbench again and click on "MySQL work bench 8.0.40" and click on (-->) arrow 
+
+        Select MySQL shell and again click on it and select "MySQL Shell 8.0." and click on (-->) arrow 
+
+step12: click on next and then click on execute 
+
+step13: click on next And again click on next again click on next Again next 
+
+step14: Accounts and Roles set a password any and then click next 
+
+step15 again click on next again next 
+
+step16: apply configuration click execute and then click finish and click on next and again click on finish  
