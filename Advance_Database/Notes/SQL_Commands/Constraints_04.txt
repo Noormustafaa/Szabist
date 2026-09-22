@@ -1,0 +1,65 @@
+Constraints_04
+
+NOT NULL Constraint
+Ensures that a column cannot have a NULL (empty) value. Every row must have data in this column.
+
+step1: 
+
+Add NOTULL when creating a table:
+
+
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    email VARCHAR(50)
+);
+
+
+step2:  
+
+2. UNIQUE Constraint
+Ensures that all values in a column are different (no duplicate values allowed, like emails or usernames).
+
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    email VARCHAR(50) UNIQUE
+);
+
+
+step3:
+3. DEFAULT Constraint
+Provides a default value for a column if no value is specified during an INSERT statement.
+
+Add DEFAULT during creation:
+
+CREATE TABLE employees (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    city VARCHAR(30) DEFAULT 'Karachi'
+);
+
+
+step4: Adding Constraints to an Existing Table.
+
+If your table is already created and you want to add a constraint later, use ALTER TABLE:
+
+Add a UNIQUE constraint:
+
+ALTER TABLE students ADD CONSTRAINT uc_email UNIQUE (email);
+
+step5: Modify a column to be NOT NULL:
+
+ALTER TABLE students MODIFY COLUMN full_name VARCHAR(100) NOT NULL;
+
+
+Verify Your Constraints
+To check your table's structure and see applied constraints, run:
+
+
+DESCRIBE students;
+
+
+
+
+
