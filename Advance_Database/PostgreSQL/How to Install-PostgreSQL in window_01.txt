@@ -1,0 +1,42 @@
+How to Install-PostgreSQL in windows 
+step1:
+open google chrome and search
+psql download ! and you will be able to see "downloads" click on it ! 
+
+
+step2: click on windows 
+
+and on windows page you need to click 
+
+download the installer 
+
+and then on windows column click on first  option 
+
+then your download will start !
+
+step3: click on it and then click on next 
+
+again next
+ 
+again next 
+
+Data directory keep it default 
+
+again click on next 
+
+and set the password 000000
+
+keep the port default !
+
+again keep default 
+
+and then click on next 
+
+again next and then click on finish 
+
+
+step4: you will see the stack builder click on cancel and then click on yes 
+
+and in cmd search on pgadmin and click on it 
+
+
