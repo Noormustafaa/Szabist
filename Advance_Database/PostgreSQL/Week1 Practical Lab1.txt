@@ -1,0 +1,84 @@
+Week1: Practical Lab1
+
+1: Create A new database 
+
+command 
+
+-- Create Database Szabist_lab;
+
+2: Create new Schema 
+
+command 
+
+Create Schema lab_schema;
+
+3:Creating Table
+
+--Create table lab_schema.students(
+
+	students_id SERIAL Primary key , 
+	roll_number  varchar(50) unique not null
+ 
+	);
+
+4: Insert Data Into The Table :
+
+--INSERT INTO lab_schema.students (roll_number) 
+VALUES 
+('SZABIST-001'),
+('SZABIST-002'),
+('SZABIST-003');
+
+
+
+
+
+
+
+
+-------
+
+Create Database Szabist_lab;
+
+Create Schema lab_schema;
+
+Create table lab_schema.students(
+
+	students_id SERIAL Primary key , 
+	roll_number  varchar(50) unique not null,
+	
+ 
+	);
+
+
+INSERT INTO lab_schema.students (roll_number) 
+VALUES 
+('SZABIST-001' ),
+('SZABIST-002'),
+('SZABIST-003' );
+
+SELECT * FROM lab_schema.students;
+
+ALTER TABLE lab_schema.students 
+ADD COLUMN full_name VARCHAR(100);
+
+SELECT * FROM lab_schema.students;
+
+UPDATE lab_schema.students 
+SET full_name = 'Ali Khan' 
+WHERE roll_number = 'SZABIST-001';
+
+UPDATE lab_schema.students 
+SET full_name = 'Ayesha Ahmed' 
+WHERE roll_number = 'SZABIST-002';
+
+UPDATE lab_schema.students 
+SET full_name = 'Bilal Raza' 
+WHERE roll_number = 'SZABIST-003';
+
+
+
+
+SELECT * FROM lab_schema.students;
+
+
