@@ -1,0 +1,34 @@
+Types-6 Left-Outer Join 
+
+
+What is a Left Outer Join?
+A Left Outer Join (or simply Left Join) is a SQL operation that retrieves all records from the left table, along with any matching records from the right table.
+
+
+All Left Table Records: Every single row from the left table (e.g., the personal table) is included in the final output, regardless of whether it has a match in the right table.
+
+
+Matched Right Records: If a match is found in the right table (e.g., the professional table) based on the join condition, the corresponding columns are displayed.
+
+
+NULL for Unmatched Rows: If a record in the left table has no matching partner in the right table, the database fills the missing columns with NULL values rather than omitting the row.
+
+
+
+SELECT name, address, dept 
+FROM personal 
+LEFT OUTER JOIN professional 
+ON (personal.id = professional.id);
+
+
+--Output 
+
+
++----------+---------+-------+
+| name     | address | dept  |
++----------+---------+-------+
+| ankit    | kapali  | icici |
+| ankush   | kapali  | BCA   |
+| akhilesh | mango   | NULL  |
+| altaf    | sakchi  | MBBS  |
++----------+---------+-------+
