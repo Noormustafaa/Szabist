@@ -1,0 +1,76 @@
+Type2-- non-equi join 
+
+
+What is a Non-Equi Join?
+A Non-Equi Join is the exact opposite of an Equi-Join.
+
+
+While an Equi-Join uses the equals operator (=) to find exact matches between tables, a Non-Equi Join uses other comparison operators—such as greater than (>), less than (<), not equal to (!= or <>), or BETWEEN—to combine tables based on a range or inequality condition
+
+
+SELECT personal.name, professional.work 
+FROM personal, professional 
+WHERE personal.id < professional.id;
+
+
+--Output 
+
+
++----------+------------+
+| name     | work       |
++----------+------------+
+| ankit    | teacher    |
+| akhilesh | doctor     |
+| ankush   | doctor     |
+| ankit    | doctor     |
+| altaf    | teacher    |
+| akhilesh | teacher    |
+| ankush   | teacher    |
+| ankit    | teacher    |
+| altaf    | programmer |
+| akhilesh | programmer |
+| ankush   | programmer |
+| ankit    | programmer 
+
+
+
+
+Understanding : 
+Condition is ---WHERE personal.id < professional.id;
+
+
+
+This means that MySQL compared each person’s ID with every ID in the professional table and checked where the personal ID is smaller (<) than the professional ID.
+
+
+3. Step-by-Step Matching:
+ankit (ID: 10):
+
+
+--Kya 10 chota hai 20 (teacher) se? Haan! -> (ankit, teacher)
+
+--Kya 10 chota hai 40 (doctor) se? Haan! -> (ankit, doctor)
+
+--Kya 10 chota hai 50 (teacher) se? Haan! --> (ankit, teacher)
+
+--Kya 10 chota hai 60 (programmer) se? Haan! --> (ankit, programmer)
+
+Now --
+
+
+ankush (ID: 20):
+
+Kya 20 chota hai 40 (doctor) se? Haan! -> (ankush, doctor)Kya 20 chota hai 50 (teacher) se? Haan! -> (ankush, teacher)Kya 20 chota hai 60 (programmer) se? Haan!-> (ankush, programmer)(Note: 20, 20 (teacher) se chota nahi barabar hai, isliye wo skip ho gaya).
+
+
+
+Now --
+
+akhilesh (ID: 30):
+
+Kya 30 chota hai 40 (doctor) se? Haan! -> (akhilesh, doctor)Kya 30 chota hai 50 (teacher) se? Haan! -> (akhilesh, teacher)Kya 30 chota hai 60 (programmer) se? Haan!-> (akhilesh, programmer)
+
+
+--Now 
+altaf (ID: 40):Kya 40 chota hai 50 (teacher) se? Haan! -> (altaf, teacher)Kya 40 chota hai 60 (programmer) se? Haan! -> (altaf, programmer)
+
