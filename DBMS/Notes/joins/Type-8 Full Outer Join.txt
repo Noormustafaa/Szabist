@@ -1,0 +1,42 @@
+Type-8 Full Outer Join:
+
+A Full Outer Join is a SQL operation that returns all records from both the left and right tables.
+
+It successfully pairs up rows that have matching values based on the join condition.
+
+For any records that lack a match on either side, it includes them in the output and fills the missing columns with NULL values.
+
+
+SELECT name, address, dept 
+FROM personal 
+FULL OUTER JOIN professional 
+ON (personal.id = professional.id); -- Note: this command will give error ! because MySQL does not support full outer join directly :
+
+
+so we can execute Query by combing both Left and Right joins
+
+SELECT name, address, dept 
+FROM personal 
+LEFT JOIN professional ON personal.id = professional.id
+UNION
+SELECT name, address, dept 
+FROM personal 
+RIGHT JOIN professional ON personal.id = professional.id;
+
+
+--output 
+
+
++----------+---------+-------+
+| name     | address | dept  |
++----------+---------+-------+
+| ankit    | kapali  | icici |
+| ankush   | kapali  | BCA   |
+| akhilesh | mango   | NULL  |
+| altaf    | sakchi  | MBBS  |
+| NULL     | NULL    | MBA   |
+| NULL     | NULL    | java  
+
+
+
+
