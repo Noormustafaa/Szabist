@@ -1,0 +1,36 @@
+Type3: Natural Join 
+
+
+What is a Natural Join?
+A Natural Join is an automated type of join in SQL that looks for columns with the same name and compatible data types in both tables and automatically joins them together.
+
+Unlike other joins, you do not need to write an ON clause (like ON personal.id = professional.id). The database engine does the work for you behind the scenes by finding the matching column names and matching their data.
+
+
+Key Characteristics:
+Automatic Matching: It automatically detects columns with identical names in both tables (in our case, the id column).
+
+Implicit Equi-Join: It performs an Equi-Join (=) using that common column without you having to explicitly type out the condition.
+
+Cleaner Syntax: Your query becomes shorter because you skip the ON or WHERE join condition.
+
+
+ex--
+
+SELECT name, contact, dept 
+FROM personal 
+NATURAL JOIN professional;
+
+
+Yeh query automatically personal aur professional tables ke common column (id) ko match karke sirf name, contact, aur dept ki columns print kar degi!
+
+it is also known as the emplicit
+
+Note: it is same as equi join !  
+
++--------+------------+-------+
+| name   | contact    | dept  |
++--------+------------+-------+
+| ankush | 2845235491 | BCA   |
+| altaf  | 4567467490 | MBBS  |
+| ankit  | 2845236589 | icici |
