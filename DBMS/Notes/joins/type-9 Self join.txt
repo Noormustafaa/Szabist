@@ -1,0 +1,43 @@
+type-9 Self join 
+
+
+What is a Self Join?
+A Self Join is a regular SQL join, but with a unique twist: a table is joined with itself.
+
+Key Rules of a Self Join
+
+
+The Same Table: You query the exact same table twice in the FROM clause.
+
+
+Aliases are Mandatory: Because you are referencing the same table twice, you must use aliases (temporary nicknames, like A and B) for the table. Without aliases, the database engine would get confused and wouldn't know which instance of the table you are referring to.
+
+Condition (ON clause): You use a condition to match columns within that same table (for example, matching an employee's manager_id with another row's employee_id).
+
+
+--Note First add Age Column 
+
+UPDATE personal SET age = 20 WHERE id = 10;
+
+UPDATE personal SET age = 30 WHERE id = 20;
+
+UPDATE personal SET age = 25 WHERE id = 30;
+
+UPDATE personal SET age = 60 WHERE id = 40;
+
+then Write : 
+
+Note : it is like we break one table into two parts :
+
+SELECT p1.name, p1.address, p2.contact 
+FROM personal p1, personal p2 
+WHERE p1.id = p2.age;
+
+--output
+NAME          ADDRESS       CONTACT
+------------  ------------  ------------
+ankush        kapali        2845236589
+akhilesh      mango         2845235491
+
+
+
