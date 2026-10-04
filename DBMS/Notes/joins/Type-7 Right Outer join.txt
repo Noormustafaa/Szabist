@@ -1,0 +1,17 @@
+Type-7 Right Outer join 
+
+SELECT name, address, dept 
+FROM personal 
+RIGHT OUTER JOIN professional 
+ON (personal.id = professional.id);
+
+
++--------+---------+-------+
+| name   | address | dept  |
++--------+---------+-------+
+| ankush | kapali  | BCA   |
+| altaf  | sakchi  | MBBS  |
+| NULL   | NULL    | MBA   |
+| NULL   | NULL    | java  |
+| ankit  | kapali  | icici |
++--------+---------+------
