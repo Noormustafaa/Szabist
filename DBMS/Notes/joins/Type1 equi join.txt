@@ -1,0 +1,80 @@
+Type1: equi join 
+
+
+Step1: Create a Table name  Personal !
+
+
+CREATE TABLE personal (
+    ID INT PRIMARY KEY,
+    NAME VARCHAR(50),
+    ADDRESS VARCHAR(50),
+    CONTACT VARCHAR(15)
+);
+
+
+INSERT INTO personal (ID, NAME, ADDRESS, CONTACT) VALUES 
+(10, 'ankit', 'kapali', '2845236589'),
+(20, 'ankush', 'kapali', '2845235491'),
+(30, 'akhilesh', 'mango', '4567235491'),
+(40, 'altaf', 'sakchi', '4567467490');
+
+
+
+
+SELECT * FROM personal;
+
+
+step2: Create Another Table named  professional
+
+
+CREATE TABLE professional (
+    WORK VARCHAR(50),
+    DEPT VARCHAR(50),
+    ID INT
+);
+
+
+
+
+INSERT INTO professional (WORK, DEPT, ID) VALUES 
+('teacher', 'BCA', 20),
+('doctor', 'MBBS', 40),
+('teacher', 'MBA', 50),
+('programmer', 'java', 60),
+('cashier', 'icici', 10);
+
+
+
+
+SELECT * FROM professional;
+
+
+
+
+Step3: Apply Equi join --
+
+SELECT name, address, work 
+FROM personal, professional 
+WHERE personal.id = professional.id;
+
+
+--output 
+
+ name   | address | work    |
++--------+---------+---------+
+| ankush | kapali  | teacher |
+| altaf  | sakchi  | doctor  |
+| ankit  | kapali  | cashier
+
+
+
+--OR If We want some more columns then we can also write 
+
+SELECT name, address, contact, work, dept 
+FROM personal, professional 
+WHERE personal.id = professional.id;
+
+
+
+
+
