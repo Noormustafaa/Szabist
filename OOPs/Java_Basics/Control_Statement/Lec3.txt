@@ -1,0 +1,114 @@
+ 1. Simple `if` Statement
+
+public class SimpleIfExample1 {
+    public static void main(String[] args) {
+        int age = 20;
+
+        if (age >= 18) {
+            System.out.println("You are eligible to vote.");
+        }
+    }
+}
+
+
+ 2. `if-else` Statement
+
+public class IfElseExample {
+    public static void main(String[] args) {
+        int marks = 75;
+
+        if (marks >= 50) {
+
+            System.out.println("Pass! Congratulations.");
+        } else {
+            System.out.println("Try again.");
+
+        }
+
+    }
+
+}
+
+
+3. `if-else-if` Ladder
+ Example 1: Grading System
+
+public class IfElseIfExample1 {
+    public static void main(String[] args) {
+        int marks = 82;
+
+        if (marks >= 90) {
+            System.out.println("Grade: A+");
+        } else if (marks >= 75) {
+            System.out.println("Grade: A");
+        } else if (marks >= 60) {
+            System.out.println("Grade: B");
+        } else {
+            System.out.println("Grade: C (Pass)");
+        }
+    }
+}
+
+
+ Example 2: Time-based Greeting
+
+
+public class IfElseIfExample2 {
+    public static void main(String[] args) {
+        int time = 15; // 24-hour format
+
+        if (time < 12) {
+            System.out.println("Good Morning!");
+        } else if (time < 16) {
+            System.out.println("Good Afternoon!");
+        } else if (time < 20) {
+            System.out.println("Good Evening!");
+        } else {
+            System.out.println("Good Night!");
+        }
+    }
+}
+
+
+ 4. Nested `if` Statement
+
+ Example 1: Blood Donation Eligibility
+
+
+public class NestedIfExample1 {
+    public static void main(String[] args) {
+        int age = 22;
+        int weight = 55;
+
+        if (age >= 18) {
+            // This condition will run only when age is 18 or more
+            if (weight >= 50) {
+                System.out.println("You are eligible to donate blood.");
+            } else {
+                System.out.println("Your age is fine, but weight is less than 50kg.");
+            }
+        } else {
+            System.out.println("Your age is less than 18, you cannot donate blood.");
+        }
+    }
+}
+
+
+ Example 2: Job Interview Shortlisting
+
+public class NestedIfExample2 {
+    public static void main(String[] args) {
+        boolean hasDegree = true;
+        int experienceYears = 3;
+
+        if (hasDegree) {
+            if (experienceYears >= 2) {
+                System.out.println("You are selected for the Senior Developer role.");
+            } else {
+                System.out.println("You will be considered for the Junior Developer role.");
+            }
+        } else {
+            System.out.println("Having a degree is mandatory for the interview.");
+        }
+    }
+}
