@@ -1,0 +1,89 @@
+Array !
+
+What is an Array?
+An Array is a special variable used to store multiple values of the same data type in a single variable, instead of declaring separate variables for each value.
+
+Think of an array as a row of contiguous memory boxes (or a list of lockers), where each box has an index number starting from 0
+
+
+Example 1: Storing and Displaying Student Marks
+In this example, we create an integer array to store the marks of 5 students and print them out using their index numbers.
+
+
+public class ArrayExample1 {
+    public static void main(String[] args) {
+        // Declaring and initializing an array with 5 values
+        int[] marks = {85, 90, 78, 92, 88};
+
+        System.out.println("Marks of Student 1: " + marks[0]); // Index 0
+        System.out.println("Marks of Student 2: " + marks[1]); // Index 1
+        System.out.println("Marks of Student 3: " + marks[2]); // Index 2
+        System.out.println("Marks of Student 4: " + marks[3]); // Index 3
+        System.out.println("Marks of Student 5: " + marks[4]); // Index 4
+    }
+}
+
+
+Example 2: Finding the Sum of Array Elements Using a Loop
+Arrays and loops work brilliantly together. Since arrays have a fixed size (length), we can use a for loop to process all elements easily, such as finding their total sum.
+
+
+
+
+public class ArrayExample2 {
+    public static void main(String[] args) {
+        // Array of prices
+        int[] prices = {100, 250, 50, 400, 150};
+        int totalSum = 0;
+
+        // Using a for loop to calculate the sum of all prices
+        for (int i = 0; i < prices.length; i++) {
+            totalSum += prices[i];
+        }
+
+        System.out.println("Total sum of prices: " + totalSum);
+    }
+}
+
+
+
+
+--Note: Yes, an array is a non-primitive (reference) data type in Java.
+
+Unlike primitive data types (like int, double, char) which store actual raw values directly in memory, non-primitive types (like arrays, classes, and strings) store a reference (memory address) pointing to where the data is actually located in the heap memory.
+
+
+
+Here are 4 clear proofs/examples that prove arrays are non-primitive types in Java:
+
+
+
+Proof 1: Arrays are created using the new keyword (like objects)
+Primitive types are declared simply (e.g., int x = 10;), but arrays must be instantiated using the new keyword, which is a characteristic of objects.
+
+
+public class ArrayProof1 {
+    public static void main(String[] args) {
+        // Arrays are instantiated using 'new', just like objects
+        int[] numbers = new int[3]; 
+        System.out.println("Array object created successfully in heap memory.");
+    }
+}
+
+
+
+Proof 2: Arrays have built-in properties (like .length)
+Primitive data types do not have properties or methods attached to them. However, arrays have access to the .length property because they are treated as objects.
+
+
+
+
+
+public class ArrayProof2 {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40};
+        
+        // Primitives like an 'int' cannot do this, but arrays can:
+        System.out.println("Length of the array: " + numbers.length);
+    }
+}
