@@ -1,0 +1,136 @@
+1. for Loop
+The for loop is used when we know beforehand how many times a block of code needs to be executed (fixed number of times). Initialization, condition, and increment/decrement are written in a single line.
+
+
+Example 1: Printing counting from 1 to 5
+
+public class ForLoopExample1 {
+    public static void main(String[] args) {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println("Number: " + i);
+        }
+    }
+}
+
+
+Example 2: Printing multiplication table of 2
+
+
+
+public class ForLoopExample2 {
+    public static void main(String[] args) {
+        int num = 2;
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(num + " x " + i + " = " + (num * i));
+        }
+    }
+}
+
+
+2. while Loop
+The while loop is used when we don't know the exact number of iterations beforehand, but we have a condition. The loop runs as long as the condition remains true. The condition is checked before executing the code block.
+
+
+
+
+public class WhileLoopExample1 {
+    public static void main(String[] args) {
+        int i = 5;
+        while (i > 0) {
+            System.out.println("Countdown: " + i);
+            i--;
+        }
+    }
+}
+
+
+
+
+Example 2: Finding the sum of numbers from 1 to 5
+
+
+
+
+public class WhileLoopExample2 {
+    public static void main(String[] args) {
+        int sum = 0;
+        int i = 1;
+        while (i <= 5) {
+            sum += i;
+            i++;
+        }
+        System.out.println("Total sum: " + sum);
+    }
+}
+
+
+
+
+3. do-while Loop
+This is similar to a while loop, but with one major difference: it runs at least once, even if the condition is false right from the beginning, because the condition is checked at the bottom (after execution).
+
+
+
+Example 1: Guaranteed execution message
+
+
+public class DoWhileExample1 {
+    public static void main(String[] args) {
+        int i = 1;
+        do {
+            System.out.println("This message will run at least once.");
+            i++;
+        } while (i > 5); // Condition is false, but it runs once anyway
+    }
+}
+
+
+
+Example 2: Printing numbers 1 to 3
+
+
+public class DoWhileExample2 {
+    public static void main(String[] args) {
+        int i = 1;
+        do {
+            System.out.println("Value of i: " + i);
+            i++;
+        } while (i <= 3);
+    }
+}
+
+
+4. For-Each Loop (Enhanced For Loop)
+This loop is specially designed to easily read data from Arrays or Collections one by one. It does not require an index or counter variable.
+
+
+public class ForEachExample1 {
+    public static void main(String[] args) {
+        int[] numbers = {10, 20, 30, 40, 50};
+        
+        for (int num : numbers) {
+            System.out.println("Number: " + num);
+        }
+    }
+}
+
+
+
+Example 2: Printing a string array of fruit names
+
+
+
+public class ForEachExample2 {
+    public static void main(String[] args) {
+        String[] fruits = {"Apple", "Banana", "Mango", "Orange"};
+        
+        for (String fruit : fruits) {
+            System.out.println("Fruit name: " + fruit);
+        }
+    }
+}
+
+
+
+
+
