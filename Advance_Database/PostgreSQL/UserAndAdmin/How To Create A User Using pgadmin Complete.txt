@@ -1,0 +1,176 @@
+--How To Create A User: Using pgadmin !
+
+
+Step1: open pgAdmin And Create a new Database
+
+Name Szabist3.
+
+
+Step2: Creating a Schema Inside the Database Szabist3.
+
+	Click on Szabist3 and Right Click on Schema Then Click on Create and then write name of schema 
+		academic_schema1   And then click on Save .
+
+Step3: Create a Table in Szabist3 Database .
+	Right click on Szabist3 Database and and click on Query tool. 
+        And Create The Table in academic_schema1 
+
+
+
+Step4. write 
+
+create table academic_schema1.students(
+
+id serial primary key,
+
+name varchar(50),
+
+department varchar(50)
+
+
+)
+ 
+
+
+step5: Insert The data in Table 
+
+
+
+insert into academic_schema1.students(name,department)
+values
+('Ali khan ', 'Computer_Department'),
+('Noor', 'Data_Science '),
+('samee','Software Engr');
+
+Select * from academic_schema1.students;
+
+
+
+Step6: Create a new User name ->   szabist_viewer1
+
+click on login/GroupRoles
+
+ then click on -> create ->then click on->login/GroupRoles
+
+Step7: Inside the General tab write Name -> szabist_viewer1
+
+
+step8: click on Defination tab and then Write password 
+
+	mypass123
+
+
+step9: click on privileges tab: click on yes to  Can login? And then click on save 
+
+step10: Assign Limited Privileges to the user : Now we just want that szabist_viewer1  just read the data (read Only / select) only on Academic schema and its student table . this user will not able to insert or delete the record .
+
+So Write on Query --
+
+GRANT USAGE ON SCHEMA  academic_schema1 TO szabist_viewer1;
+
+--in this command we just Grant to this particular user ! 
+
+
+Step10-- this Query will just Give access to read data !
+
+
+
+GRANT SELECT ON ALL TABLES IN SCHEMA academic_schema1 TO szabist_viewer1;
+
+
+
+step11: Write 
+
+Select current_user;    // if it shows postgress that means you are in the admin role --Admin (Superuser)
+
+
+
+step12: Write this command to switch the role.
+
+
+SET ROLE szabist_viewer1;
+
+
+
+step13. Write this command to check the current User .
+
+
+
+step14:Let's prove First let's try to read the data .
+
+SELECT * FROM academic_schema1.students; // this will give no erorr !
+
+
+
+
+
+step15--let's try to insert some data --
+
+
+
+INSERT INTO academic_schema1.students (name, department) 
+VALUES ('Test Student', 'Testing');                         /// this Will give error !
+
+
+like this ---
+
+ERROR:  permission denied for table students 
+
+SQL state: 42501
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
