@@ -1,0 +1,79 @@
+--UNIQUE
+
+What is a UNIQUE Constraint?
+
+A UNIQUE constraint ensures that all values in a specific column (or a combination of columns) are completely different from one another. No two rows are allowed to have the same value in that column.
+
+
+Key Difference from PRIMARY KEY: While a table can only have one PRIMARY KEY, it can have multiple UNIQUE constraints. Additionally, a UNIQUE column usually allows a NULL value (depending on the database system, it often allows a single NULL, treating it as distinct).
+
+
+Practical Example: Combining Numeric and String UNIQUE Constraints
+Let's create a table that applies a UNIQUE constraint to a numeric column (Roll Number) and a string column (Email Address).
+
+
+Step 1: Create the Table
+
+
+
+USE SchoolDB;
+
+CREATE TABLE StudentRegistry (
+    StudentID INT PRIMARY KEY,
+    RollNumber INT UNIQUE,             -- Numeric data constraint
+    EmailAddress VARCHAR(100) UNIQUE   -- String data constraint
+);
+
+
+Step 2: Testing Successful Insertion
+This query will run successfully because both the numeric RollNumber and the string EmailAddress are unique.
+
+
+
+INSERT INTO StudentRegistry (StudentID, RollNumber, EmailAddress) 
+VALUES (1, 501, 'alice@university.edu');
+
+INSERT INTO StudentRegistry (StudentID, RollNumber, EmailAddress) 
+VALUES (2, 502, 'bob@university.edu');
+
+
+
+
+
+Step 3: Testing Violations (Failures)
+1. Violating the Numeric UNIQUE Constraint:
+If you try to insert a duplicate RollNumber (which is numeric), the database will reject it.
+
+
+-- This will FAIL because RollNumber 501 already exists:
+
+INSERT INTO StudentRegistry (StudentID, RollNumber, EmailAddress) 
+VALUES (3, 501, 'charlie@university.edu');
+
+Error Output: Duplicate entry '501' for key 'RollNumber'
+
+
+
+2. Violating the String UNIQUE Constraint:
+
+If you try to insert a duplicate EmailAddress (which is a string), the database will also reject it.
+
+-- This will FAIL because 'alice@university.edu' already exists:
+
+INSERT INTO StudentRegistry (StudentID, RollNumber, EmailAddress) 
+VALUES (4, 503, 'alice@university.edu');
+
+
+Error Output: Duplicate entry 'alice@university.edu' for key 'EmailAddress'
+
+
+
+
+
+
+
+
+
+
+
+
