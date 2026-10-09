@@ -33,3 +33,36 @@ VALUES (1, 'Sarah Connor');
 
 
 
+
+Step 3: Testing Insertion (Overriding Default Values)
+
+
+You are not forced to use the default value. If you want to specify your own values during insertion, you can override them normally:
+
+
+-- Overriding both the default string and numeric values
+INSERT INTO LibraryMembers (MemberID, MemberName, MembershipStatus, FineBalance) 
+VALUES (2, 'John Smith', 'Suspended', 15.50);
+
+Result in Database
+
+
+
+MembershipStatus will be 'Suspended' (overriding 'Active').
+
+FineBalance will be 15.50 (overriding 0.00).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
