@@ -1,0 +1,76 @@
+What is a FOREIGN KEY Constraint?
+
+
+A FOREIGN KEY is a field (or collection of fields) in one table that uniquely links to the PRIMARY KEY of another table.
+
+What it does: It establishes a parent-child relationship between two tables and maintains referential integrity.
+
+The Golden Rule: You cannot insert a value into a foreign key column unless that exact value already exists in the parent table's primary key column (or unless it is explicitly set to NULL).
+
+Why it's useful: It prevents "orphan" records—for example, it stops you from assigning an employee to a department that doesn't actually exist in the database.
+
+Practical Example: Linking Two Tables with a FOREIGN KEY
+To test a foreign key, we need two tables: a parent table (Departments) and a child table (Employees).
+
+
+Step 1: Create the Parent Table (Departments)
+First, we create the table that holds the master list of departments. DepartmentID will be its Primary Key.
+
+
+USE SchoolDB;
+
+CREATE TABLE Departments (
+    DepartmentID INT PRIMARY KEY,
+    DepartmentName VARCHAR(50) NOT NULL
+);
+
+
+Step 2: Create the Child Table with a FOREIGN KEY (Employees)
+Next, we create the Employees table. The DepartmentID column here acts as a Foreign Key pointing to the Departments table.
+
+
+
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    EmployeeName VARCHAR(50) NOT NULL,
+    DepartmentID INT, -- This will link to the Departments table
+    CONSTRAINT FK_Employee_Department 
+        FOREIGN KEY (DepartmentID) 
+        REFERENCES Departments(DepartmentID)
+);
+
+
+
+
+Step 3: Testing Successful Insertion (Valid Data)
+Before we can add employees, we must first insert valid departments into the parent table.
+
+
+
+
+-- 1. Insert valid parent records first
+INSERT INTO Departments (DepartmentID, DepartmentName) VALUES (1, 'Computer Science');
+INSERT INTO Departments (DepartmentID, DepartmentName) VALUES (2, 'Mathematics');
+
+-- 2. Insert child records with valid DepartmentIDs (1 or 2)
+INSERT INTO Employees (EmployeeID, EmployeeName, DepartmentID) 
+VALUES (101, 'Alice Smith', 1); -- Valid: Department 1 exists
+
+INSERT INTO Employees (EmployeeID, EmployeeName, DepartmentID) 
+VALUES (102, 'Bob Jones', 2);   -- Valid: Department 2 exists
+
+
+
+
+
+Step 4: Testing Violations (Failures)
+1. Violating the Foreign Key by Inserting a Non-Existent Reference:
+If you try to assign an employee to a DepartmentID that has never been created in the Departments table, the database will reject it.
+
+
+
+-- This will FAIL because DepartmentID 99 does not exist in the Departments table:
+INSERT INTO Employees (EmployeeID, EmployeeName, DepartmentID) 
+VALUES (103, 'Charlie Brown', 99);
+
+Error Output: Cannot add or update a child row: a foreign key constraint fails (SchoolDB.Employees, CONSTRAINT FK_Employee_Department FOREIGN KEY (DepartmentID) REFERENCES Departments (DepartmentID))
