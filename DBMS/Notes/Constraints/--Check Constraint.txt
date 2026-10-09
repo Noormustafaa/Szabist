@@ -1,0 +1,24 @@
+--Check Constraint 
+
+If someone tries to save data that breaks the rule, the database blocks it and throws an error.
+
+Step1 - Create A table which check 
+
+CREATE TABLE Employees (
+    ID INT,
+    Name VARCHAR(50),
+    Age INT CHECK (Age >= 18)  -- This is the CHECK constraint!
+);
+
+Sep2--Insert Data age>18
+
+INSERT INTO Employees (ID, Name, Age) VALUES (1, 'Ali', 22);
+
+Goes through successfully because 22 is greater than 18.
+
+
+Rejected: 
+
+Step3--Insert The Data Age <18
+
+INSERT INTO Employees (ID, Name, Age) VALUES (2, 'Sara', 16);
