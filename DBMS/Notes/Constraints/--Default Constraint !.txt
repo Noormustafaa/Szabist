@@ -1,0 +1,35 @@
+--Default Constraint !
+
+What is a DEFAULT Constraint?
+
+A DEFAULT constraint is used to automatically assign a fallback value to a column if the user or application does not provide a value during an INSERT operation.
+
+Step 1: Create the Table with DEFAULT Constraints
+
+
+USE SchoolDB;
+
+CREATE TABLE LibraryMembers (
+    MemberID INT PRIMARY KEY,
+
+    MemberName VARCHAR(50) NOT NULL,
+
+    MembershipStatus VARCHAR(20) DEFAULT 'Active', -- String default constraint
+
+
+    FineBalance DECIMAL(5,2) DEFAULT 0.00          -- Numeric default constraint
+
+);
+
+Step 2: Testing Insertion (Using Default Values)
+If we insert a record and completely skip MembershipStatus and FineBalance, the database will automatically fill them in with their default values.
+
+
+-- We only provide MemberID and MemberName
+
+INSERT INTO LibraryMembers (MemberID, MemberName) 
+
+VALUES (1, 'Sarah Connor');
+
+
+
