@@ -1,0 +1,47 @@
+Database Constraints
+
+Database Constraints are rules or restrictions enforced on columns or tables within a database. Their main purpose is to ensure the accuracy, validity, and integrity of the data.
+
+If an action violates a constraint (for example, trying to insert a negative age or a duplicate ID), the database engine rejects the operation and throws an error.
+
+
+Constraints in SQL  
+
+ NOT NULL 
+
+ UNIQUE   
+
+ CHECK   
+
+ DEFAULT   
+
+ PRIMARY KEY   
+
+ FOREIGN KEY
+
+
+Composite Constraints (Multi-Column Constraints)
+
+What it is: A constraint applied to two or more columns combined, rather than just a single column.
+
+How it works: Often used for Primary Keys or Unique constraints when a single column isn't enough to uniquely identify a row.
+
+
+PRIMARY KEY (StudentID, CourseID) -- A student can take many courses, but the combination of StudentID and CourseID must be unique.
+
+
+EXCLUDE Constraint (Advanced / PostgreSQL)
+
+
+What it is: A constraint that prevents overlapping data ranges. If you insert a new row, it checks that it doesn't conflict with existing rows using specific operators.
+
+How it works: Highly useful for scheduling, room bookings, or time slots to ensure no two events overlap.
+
+Example:
+
+
+What it is: A constraint that prevents overlapping data ranges. If you insert a new row, it checks that it doesn't conflict with existing rows using specific operators.
+
+How it works: Highly useful for scheduling, room bookings, or time slots to ensure no two events overlap.
+
+Example:
