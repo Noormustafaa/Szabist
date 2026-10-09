@@ -1,0 +1,84 @@
+Primary key--
+
+What is a PRIMARY KEY Constraint?
+A PRIMARY KEY is a field (or combination of fields) that uniquely identifies each row in a table. Think of it like a national ID card number, student roll number, or employee ID—it must be completely unique to every individual row.
+
+
+The Two Golden Rules of a Primary Key:
+
+Must be Unique: No two rows can have the same primary key value.
+
+Cannot be NULL: Every single row must have a value here; it can never be left blank or empty.
+
+
+Key Difference from UNIQUE: While a table can have multiple UNIQUE constraints, it can have only one PRIMARY KEY. (In essence, a Primary Key is a combination of UNIQUE + NOT NULL).
+
+Practical Example: Creating and Testing a PRIMARY KEY
+
+Let's create an Employees table where EmployeeID acts as the primary key.
+
+Step 1: Create the Table with a Primary Key
+
+USE SchoolDB;
+
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,       -- Numeric Primary Key (Cannot be NULL and must be Unique)
+    EmployeeName VARCHAR(50) NOT NULL,
+    Department VARCHAR(50)
+);
+
+Step 2: Testing Successful Insertion
+
+
+
+This query will run successfully because both employees have unique, valid EmployeeID numbers.
+
+
+
+INSERT INTO Employees (EmployeeID, EmployeeName, Department) 
+VALUES (101, 'Michael Scott', 'Management');
+
+INSERT INTO Employees (EmployeeID, EmployeeName, Department) 
+VALUES (102, 'Dwight Schrute', 'Sales');
+
+
+
+Step 3: Testing Violations (Failures)
+1. Violating the Primary Key by Inserting a Duplicate ID:
+If you try to insert a new row using an EmployeeID that already exists (101), the database will reject it.
+
+
+-- This will FAIL because EmployeeID 101 already exists:
+INSERT INTO Employees (EmployeeID, EmployeeName, Department) 
+VALUES (101, 'Jim Halpert', 'Sales');
+
+
+-- This will FAIL because EmployeeID 101 already exists:
+INSERT INTO Employees (EmployeeID, EmployeeName, Department) 
+VALUES (101, 'Jim Halpert', 'Sales');
+
+
+
+Error Output: Duplicate entry '101' for key 'PRIMARY'
+
+
+--
+
+2. Violating the Primary Key by Inserting a NULL (Blank) Value:
+If you try to leave the primary key column empty or explicitly pass NULL, the database will also reject it because a primary key can never be missing.
+
+
+-- This will FAIL because EmployeeID cannot be NULL:
+INSERT INTO Employees (EmployeeID, EmployeeName, Department) 
+VALUES (NULL, 'Pam Beesly', 'Reception');
+
+Error Output: Column 'EmployeeID' cannot be null
+
+
+
+
+
+
+
+
+
