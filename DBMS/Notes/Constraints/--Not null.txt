@@ -1,0 +1,73 @@
+--Not null 
+
+Step1--
+
+CREATE DATABASE SchoolDB;
+
+
+Step 2: Set the Schema / Use the Database
+
+
+Next, we select (or switch to) the newly created database so that subsequent commands apply to its schema.
+
+
+USE SchoolDB;
+
+
+Step 3: Create a Table with a NOT NULL Constraint
+
+
+Now, we create a Teachers table. We will apply the NOT NULL constraint to the FullName column, meaning every teacher record must have a name—it cannot be left blank/empty.
+
+
+
+CREATE TABLE Teachers (
+    TeacherID INT PRIMARY KEY,
+    FullName VARCHAR(50) NOT NULL, -- This column cannot accept NULL (empty) values
+    Email VARCHAR(100)
+);
+
+
+
+
+Step 4: Testing the NOT NULL Constraint with Examples
+1. Successful Insertion (Valid Data)
+
+
+
+This query will run successfully because a valid FullName is provided.
+
+
+INSERT INTO Teachers (TeacherID, FullName, Email) 
+VALUES (1, 'Alice Smith', 'alice@school.edu');
+
+
+
+
+2. Failed Insertion (Violating NOT NULL)
+
+If you try to insert a row without providing a value for FullName, the database will reject it and throw an error because FullName is restricted by NOT NULL.
+
+
+-- This will FAIL and return a NOT NULL constraint error:
+
+
+INSERT INTO Teachers (TeacherID, FullName, Email) 
+VALUES (2, NULL, 'ali@school.edu');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
