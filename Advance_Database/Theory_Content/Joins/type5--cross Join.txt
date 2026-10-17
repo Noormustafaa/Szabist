@@ -1,0 +1,57 @@
+type5--cross Join 
+
+A Cross Join is a SQL operation that combines every single row from the first table with every single row from the second table.
+
+It generates a Cartesian product, meaning it pairs each record in Table A with every individual record in Table B.
+
+It does not require any matching condition or ON clause, which often results in a massive output containing rows equal to the total rows of Table A multiplied by Table B.
+
+--command 
+
+
+
+SELECT name, contact, dept 
+FROM personal 
+CROSS JOIN professional;
+
+
+--Output
+
+
++----------+------------+-------+
+| name     | contact    | dept  |
++----------+------------+-------+
+| altaf    | 4567467490 | BCA   |
+| akhilesh | 4567235491 | BCA   |
+| ankush   | 2845235491 | BCA   |
+| ankit    | 2845236589 | BCA   |
+| altaf    | 4567467490 | MBBS  |
+| akhilesh | 4567235491 | MBBS  |
+| ankush   | 2845235491 | MBBS  |
+| ankit    | 2845236589 | MBBS  |
+| altaf    | 4567467490 | MBA   |
+| akhilesh | 4567235491 | MBA   |
+| ankush   | 2845235491 | MBA   |
+| ankit    | 2845236589 | MBA   |
+| altaf    | 4567467490 | java  |
+| akhilesh | 4567235491 | java  |
+| ankush   | 2845235491 | java  |
+| ankit    | 2845236589 | java  |
+| altaf    | 4567467490 | icici |
+| akhilesh | 4567235491 | icici |
+| ankush   | 2845235491 | icici |
+| ankit    | 2845236589 | icici |
++----------+------------+-------+
+
+
+
+There are  4 rows in personal table and professional 5 so total 20 rows 
+
+
+Pehli table (personal) mein total kitni rows hain? -->4 rows (ankit, ankush, akhilesh, altaf) 
+
+
+Doosri table (professional) mein total kitni rows hain? --> 5 rows (cashier, teacher, doctor, teacher, programmer)
+
+
+Jab aap CROSS JOIN likhte hain, toh MySQL har aik record ko aapas mein multiply kar deta hai:
