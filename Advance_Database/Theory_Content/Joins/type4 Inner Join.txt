@@ -1,0 +1,24 @@
+type4: Inner Join 
+it is similar to equi join and Natual join in practical implementation but different in syntax 
+
+An Inner Join is a SQL operation used to combine matching rows from two or more tables based on a shared column.
+
+It returns only the records that have matching values in both tables, completely ignoring any unmatched data.
+
+
+Any rows without a mutual match are left out of the final output.
+
+
+
+SELECT name, contact, dept 
+FROM personal 
+INNER JOIN professional 
+ON personal.id = professional.id;
+
++--------+------------+-------+
+| name   | contact    | dept  |
++--------+------------+-------+
+| ankush | 2845235491 | BCA   |
+| altaf  | 4567467490 | MBBS  |
+| ankit  | 2845236589 | icici |
++--------+------------+-------
