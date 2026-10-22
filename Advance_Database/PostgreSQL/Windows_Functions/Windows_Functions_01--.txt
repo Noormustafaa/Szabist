@@ -1,0 +1,59 @@
+Windows_Functions--
+
+type1
+
+1--Windows Functions Row Number()
+
+
+Create Table employees(
+
+id serial primary key,
+
+name varchar(50),
+
+department varchar(20),
+
+salary INT ,
+
+hire_date DATE
+
+);
+
+
+Insert into employees (name, department, salary, hire_date)Values
+('Ali', 'IT', 90000,'2022-01-10'),
+('Sara','IT',95000,'2021-03-15'),
+('Ahmed', 'IT',90000,'2023-06-01'),
+('Fatima','HR',70000,'2020-05-20'),
+('Bilal','HR',75000,'2022-08-11'),
+('Zainab', 'HR',70000,'2023-01-05'),
+('Usman','Sales',60000,'2021-11-01'),
+('Ayesha','Sales',6500,'2022-02-20'),
+('Hassan','Sales',80000,'2020-09-12');
+
+--Applying Windows Functions 
+--Window Function (ROW_NUMBER)
+Select name, Department , Salary , 
+	Row_Number() Over (Partition BY department order by salary DESC) as row_num 
+	from employees;
+
+
+
+
+1--PARTITION BY department: This divides the data into separate groups (partitions)
+ based on departments (such as IT, HR, and Sales). This means the data for each department is treated independently.
+
+2--ORDER BY salary DESC: This sorts the employees' salaries within each department in descending order—from highest to lowest.
+
+
+3--ROW_NUMBER(): This function assigns a sequential number (1, 2, 3...) to employees within each department based on their salary ranking.
+
+4--The employee with the highest salary in that department gets row_num = 1, the next highest gets 2, and so on.
+
+5--Whenever a new department begins (for example, moving from IT to HR), the numbering resets and starts over from 1
+
+
+
+
+
+
