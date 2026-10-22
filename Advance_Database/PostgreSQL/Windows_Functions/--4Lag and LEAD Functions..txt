@@ -1,0 +1,18 @@
+--4Lag and LEAD Functions. 
+
+In SQL, LAG() and LEAD() are very powerful window functions. Think of them 
+as "time-travel" or "looking backward and forward" functions.
+
+Instead of writing complicated self-joins, these functions allow you to look at data
+from previous rows (LAG) or next rows (LEAD) right within your current row.
+
+
+1. What is LAG()?
+Definition: LAG() looks backward at a previous row.
+
+Why use it: To compare current data with the row that came before it. 
+(e.g., "What was yesterday's stock price compared to today?", or "What is the salary of the 
+employee ranked just above/before this one?").
+
+
+LAG looks back 1 row. Very useful to find salary difference, month-over-month growth. LEAD() looks forward.
