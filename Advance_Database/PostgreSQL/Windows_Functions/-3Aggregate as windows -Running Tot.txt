@@ -1,0 +1,40 @@
+-3Aggregate as windows -Running Total And Average 
+
+
+Select name , department , salary , 
+   SUM(salary) over (Partition BY department) as dept_total_salary,
+   AVG(salary) over (Partition by department) as dept_avg_salary
+from employees;
+
+
+--Normally, in SQL, if you use SUM() or AVG(), SQL squashes all rows into a single row to show the total.
+
+Unlike a regular GROUP BY clause (which collapses rows into a single summary row), window functions allow you to keep every individual employee row while still displaying aggregate calculations (like total or average) alongside them.
+
+1. SUM(salary) OVER (PARTITION BY department)
+
+What it does: It calculates the total sum of salaries for each department and displays that total next to every employee in that department.
+
+How it looks: If the IT department has 3 employees making 95,000, 90,000, and 90,000, the total sum is 275,000. Every employee in the IT department will have 275,000 shown in the dept_total_salary column.
+
+2. 
+
+Run Below Query..
+
+AVG(salary) OVER (PARTITION BY department)
+
+--How it works ? It calculates the average salary for each department and displays that average next to every employee in that department.
+
+How it looks: It takes the total department salary and divides it by the number of employees in that department, repeating that average value for each employee in that group.
+
+
+3--2. With GROUP BY (Department-Wise Summary)
+Usually, when you want to see totals or averages per category (like per department), you combine normal aggregate functions with a GROUP BY clause.
+
+
+---- So how Windows Functions Works 
+
+--How it works step-by-step:
+
+--GROUP BY department: SQL gathers all employees and sorts them into separate 
+--department buckets (IT, HR, Sales).
