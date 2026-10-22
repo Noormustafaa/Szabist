@@ -1,0 +1,74 @@
+Rank_Function.And Dense_Rank
+
+
+Select name, department , salary ,
+	Rank() Over (Partition by  department order by salary DESC) as rank,
+	Dense_Rank() over (Partition by department order by salary DESC ) as dense_rank
+	from employees;
+
+
+--Both RANK() and DENSE_RANK() are window functions used to assign a rank to each row
+ within a partition based on a specific column value (in this case, salary).
+
+--The key difference between them appears when there are duplicate values (ties).or(common)or(same).
+
+
+1. RANK()
+
+How it works: Assigns a rank based on salary. When two or more employees have the same salary:
+
+-They receive the same rank.
+
+The function skips the subsequent rank numbers based on the number of tied rows.
+
+Example (IT Department):
+
+Sara's salary: 95,000 --> Rank 1
+
+Ali's salary: 90,000 --> Rank 2
+
+Ahmed's salary: 90,000 --> Rank 2 (Tie with Ali)
+
+
+Next Employee: The next rank would be 4 (Rank 3 is skipped because two people shared Rank 2).
+
+
+
+2. DENSE_RANK()
+
+
+How it works: Also assigns a rank based on salary and gives tied rows the same rank, but does NOT skip any numbers (it remains consecutive).
+
+Example (IT Department):
+
+Sara's salary: 95,000 --> Dense Rank 1
+
+Ali's salary: 90,000 ---> Dense Rank 2
+
+Ahmed's salary: 90,000 ---> Dense Rank 2 (Tie with Ali)
+
+Next Employee: The next rank will be 3 (No numbers are skipped).
+
+
+(Note: If there were a 4th employee in HR with a salary of 65,000, RANK() would assign them 4, whereas DENSE_RANK() would assign them 3).
+
+--Note 
+
+ROW_NUMBER(): Always assigns unique sequential numbers (1, 2, 3, 4), ignoring ties.
+
+RANK(): Assigns equal ranks to tied values and skips numbers (1, 2, 2, 4).
+
+DENSE_RANK(): Assigns equal ranks to tied values without skipping numbers (1, 2, 2, 3).
+
+
+
+
+
+
+
+
+
+
+
+
+
