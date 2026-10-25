@@ -1,0 +1,55 @@
+Trigger
+
+CREATE TABLE customers (
+  2      id INT PRIMARY KEY,
+  3      name VARCHAR2(50) NOT NULL,
+  4      age INT,
+  5      address VARCHAR2(100),
+  6      salary NUMBER(10, 2)
+  7  );
+
+
+INSERT INTO customers (id, name, age, address, salary) VALUES (1, 'Hari', 32, 'Delhi', 2000.00);
+INSERT INTO customers (id, name, age, address, salary) VALUES (2, 'Priya', 35, 'Hyd', 1500.00);
+INSERT INTO customers (id, name, age, address, salary) VALUES (3, 'Raghu', 30, 'Mumbai', 2000.00);
+INSERT INTO customers (id, name, age, address, salary) VALUES (4, 'Deepu', 32, 'Pune', 6500.00);
+INSERT INTO customers (id, name, age, address, salary) VALUES (5, 'Pinky', 37, 'MP', 8500.00);
+
+COMMIT;
+
+
+CREATE OR REPLACE TRIGGER display_salary_changes
+
+BEFORE DELETE OR INSERT OR UPDATE ON customers
+
+FOR EACH ROW
+
+WHEN (NEW.ID > 0)
+
+DECLARE
+
+    sal_diff NUMBER;
+
+BEGIN
+
+    sal_diff := :NEW.salary - :OLD.salary;
+    DBMS_OUTPUT.PUT_LINE('old salary:' || :OLD.salary);
+    DBMS_OUTPUT.PUT_LINE('new salary:' || :NEW.salary);
+    DBMS_OUTPUT.PUT_LINE('salary diff:' || sal_diff);
+
+END;
+/
+
+
+--For Testing Write 
+
+SET SERVEROUTPUT ON;
+
+
+UPDATE customers SET salary = 3000 WHERE id = 1;
+
+
+ UPDATE customers SET salary = 3000 WHERE id = 1;
+old salary:2000
+new salary:3000
+salary diff:1000
