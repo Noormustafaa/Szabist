@@ -1,0 +1,30 @@
+Select And Where Command 
+
+---For view The just Specific column from table
+
+Query 
+
+Select column1,Column2,Column3
+
+from table_Name;
+
+--To review the all colums
+
+Query 
+
+Select * from table_Name;
+
+
+--To View the Conditional base Data .For that we use where clause 
+
+Query 
+
+Select coulumn1, Colum2, Column3 
+from table_name where Condition;
+
+example.
+
+Select * from personal 
+
+where age>20;
+
