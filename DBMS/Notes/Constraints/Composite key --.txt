@@ -1,0 +1,39 @@
+Composite key --
+
+A composite key is a primary key made up of two or more columns combined to uniquely identify each row in a table.
+
+Individually, none of these columns are unique on their own, but together their combination is completely unique.
+
+
+
+StudentID,                CourseID,    EnrollmentDate,      Result
+101,                      SQL101,      2026-09-01,          ✅ Saved
+101,                      JAVA202,     2026-09-01,          ✅ Saved
+102,                      SQL101,      2026-09-02,          ✅ Saved
+101,                      SQL101,      2026-09-05,          ❌ Error! Duplicate Entry
+
+
+
+CREATE TABLE Enrollments (
+    StudentID INT,
+    CourseID VARCHAR(10),
+    EnrollmentDate DATE,
+    PRIMARY KEY (StudentID, CourseID) -- Composite Key
+);
+
+
+INSERT INTO Enrollments (StudentID, CourseID, EnrollmentDate) 
+VALUES 
+(101, 'SQL101', '2026-09-01'),
+(101, 'JAVA202', '2026-09-01'),
+(102, 'SQL101', '2026-09-02');
+
+
+--this query will Give an error ! because 101 is already enrolled in sql101 
+
+
+INSERT INTO Enrollments (StudentID, CourseID, EnrollmentDate) 
+VALUES (101, 'SQL101', '2026-09-05');
+
+
+
