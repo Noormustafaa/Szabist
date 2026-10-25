@@ -1,0 +1,35 @@
+F_ key 
+
+
+Create table 
+
+
+create table Department (
+     dept_id INT primary key ,
+
+     dept_name varchar(50)
+
+     );
+
+
+ create table Student(
+     Student_id INT primary key ,
+     Student_name varchar(50),
+     dept_id INT,
+     Foreign key (dept_id)
+     References Department(dept_id)
+     );
+
+
+Insert into Department Values (1,'Computer Science '),(2,'Electrical');
+
+
+Insert into Student Values(101,'Musavir',1);
+
+Insert into Student Values (102,'Ali',1);
+
+
+Insert into Student values(103,'sara',2);
+
+
+Insert into Student Values (104,'Ahmed',99); // this will give error because  in department table 99 id does not exist ! that why foreign key provide data integrity.
