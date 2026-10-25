@@ -1,0 +1,13 @@
+--how to Delete Table Columns 
+
+ALTER TABLE Enrollments 
+DROP COLUMN EnrollmentDate;
+
+
+--How to Delete Complete Table 
+
+DROP TABLE Enrollments;
+
+--To delete the only records schema will remain exist !
+
+TRUNCATE TABLE Enrollments;
